@@ -54,10 +54,15 @@ body {
       padding: 0;
       background-color: #414141;
       text-align: center;
+
+      li {
+        padding: 4em 0;
+      }
     }
 
     li a {
       text-decoration: none;
+      font-size: 4em;
     }
 
     .hamburger {
