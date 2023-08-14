@@ -20,56 +20,60 @@ const Navbar = () => {
       x.style.display = "block";
     }
   }
+ 
+  let navbar;
 
+  console.log(isDesktopOrLaptop);
+  console.log(isTabletOrMobile)
+  if (isDesktopOrLaptop) {
+    navbar = <nav className="expanded">
+    <ul className="nav-links">
+      <li>
+        <a href="#">
+          <UilApple />
+        </a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Resume</a>
+      </li>
+      <li>
+        <a href="#">Portfolio</a>
+      </li>
+      <li>
+        <a href="#">Home</a>
+      </li>
+    </ul>
+  </nav>
+  } else {
+    navbar = <nav className="condensed">
+    <a href="#" className="icon">
+      <UilApple />
+    </a>
+    <ul id="nav-links">
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Resume</a>
+      </li>
+      <li>
+        <a href="#">Portfolio</a>
+      </li>
+      <li>
+        <a href="#">Home</a>
+      </li>
+    </ul>
+
+    <a href="#" className="hamburger" onClick={logNavClick}><UilBars/></a>
+  </nav>
+  }
+
+  console.log(navbar)
   return (
-    <>
-      {isDesktopOrLaptop && (
-        <nav className="expanded">
-          <ul>
-            <li>
-              <a href="#">
-                <UilApple />
-              </a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Resume</a>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Home</a>
-            </li>
-          </ul>
-        </nav>
-      )}
-      {isTabletOrMobile && (
-        <nav className="condensed">
-          <a href="#" className="icon">
-            <UilApple />
-          </a>
-          <ul id="nav-links">
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Resume</a>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Home</a>
-            </li>
-          </ul>
-
-          <a href="#" className="hamburger" onClick={logNavClick}><UilBars/></a>
-        </nav>
-      )}
-    </>
+    navbar
   );
 };
 
