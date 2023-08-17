@@ -1,75 +1,217 @@
+$dark-text: #b4afab;
+$orange: #f7a059;
+$tech-text: "Share Tech", sans-serif;
+$bold-text: "Roboto", sans-serif;
+$background: #3c475c;
+
+.hide {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: $background;
 
-    .expanded {
-    #nav-links {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
+  .nav-bar {
+    position: inline-flex;
+    padding-top: 10px;
 
-      :first-child {
-        float: left;
+    .logo {
+      float: left;
+      margin: 6px 15px;
+      margin-left: 50px;
+      color: $orange;
+      font-weight: bolder;
+
+      .icon {
+        color: $orange;
+        text-decoration: none;
+        font-size: 3em;
       }
+    }
+
+    counter-set: nav-counter;
+
+    ul,
+    .bars {
+      float: right;
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      margin-right: 60px;
 
       li {
-        float: right;
+        margin: 0 15px;
+        font-weight: bold;
+        color: $dark-text;
+        font-family: $tech-text;
 
         a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
           text-decoration: none;
-        }
-
-        a:hover:not(.active) {
-          background-color: #111;
+          color: inherit;
         }
       }
+
+      li:hover {
+        color: $orange;
+      }
+
+      li:before {
+        content: counter(nav-counter, decimal-leading-zero) ".";
+        counter-increment: nav-counter;
+        margin-right: 4px;
+        color: $orange;
+      }
+
+      a {
+        text-decoration: none;
+        .resume-button {
+          padding: 5px 8px;
+          font-weight: normal;
+          border-radius: 2px;
+          font-size: 1em;
+          top: -7px;
+          position: relative;
+          color: $orange;
+          border: solid 2px $orange;
+        }
+
+        .resume-button:before {
+          display: none;
+        }
+
+        .resume-button:hover {
+          color: $background;
+          background-color: #f7a059;
+        }
+      }
+    }
+
+    .bars {
+      display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding-top: 0;
+
+      ul {
+        display: none;
+      }
+
+      .bars {
+        display: flex;
+        padding: 16px 15px;
+        margin-right: 30px;
+        color: $orange;
+        font-size: 1.5em;
+        padding-top: 25px;
+      }
+
+      .logo {
+        margin-left: 30px;
+
+        img {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1380px) {
+      font-size: 1.1em;
     }
   }
 
-  .condensed {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-    padding: 1em .5em;
+  .scrolled {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
 
-    a {
-        color: white;
-    }
-    .icon {
-        display: block;
-        text-decoration: none;
-    }
-    #nav-links {
-        display: none;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #414141;
-      text-align: center;
+  .nav-side-bar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+
+    .nav-content {
+      background-color: #3c475c;
+      width: 70vw;
+      height: 100vh;
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      right: 0;
+      z-index: 1000;
+
+      .exit {
+        position: fixed;
+        top: 15px;
+        right: 37px;
+        padding: 10px;
+        color: $orange;
+        font-weight: bolder;
+        font-size: 1.5em;
+
+        i {
+          margin-right: 30px;
+          margin-top: 1em;
+        }
+      }
+
+      .nav-items {
+        list-style: none;
+        height: 70%;
+        margin: auto;
+        font-size: 1.5em;
+        padding-left: 0;
+      }
 
       li {
-        padding: 4em 0;
+        margin: 40px 15px;
+        font-weight: bold;
+        color: $dark-text;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
       }
-    }
 
-    li a {
-      text-decoration: none;
-      font-size: 4em;
-    }
+      li:hover {
+        color: $orange;
+      }
 
-    .hamburger {
+      li:before {
+        content: counter(nav-counter, decimal-leading-zero) "." "\A";
+        counter-increment: nav-counter;
+        margin-right: 4px;
         display: block;
-        position: absolute;
-        right: 1em;
-        top: 1em;
+        color: $orange;
+      }
+
+      a {
+        text-decoration: none;
+
+        .resume-button {
+          padding: 5px 8px 8px 8px;
+          font-weight: normal;
+          border-radius: 2px;
+          font-size: 1em;
+          position: relative;
+          color: $orange;
+          border: solid 2px $orange;
+        }
+
+        .resume-button:hover {
+          color: $background;
+          background-color: #f7a059;
+        }
+
+        .resume-button:before {
+          display: none;
+        }
+      }
     }
   }
 }

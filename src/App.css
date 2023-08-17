@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px) {
+    @keyframes item-slide-in {
+      0% {
+        transform: translateX(200px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .nav-content-slide {
+      animation: menu-slide-in 0.5s ease-in;
+    }
+
+    .nav-items li {
+      animation: item-slide-in 1s ease-in 0s 1;
+    }
+
+    .nav-items li:nth-child(2) {
+      animation-delay: 0.05s;
+    }
+
+    .nav-items li:nth-child(3) {
+      animation-delay: 0.1s;
+    }
+
+    .nav-items li:nth-child(4) {
+      animation-delay: 0.15s;
+    }
+  }
