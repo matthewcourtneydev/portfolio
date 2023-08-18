@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background;
+  overflow-y: hidden;
 
   a {
     all: unset;
@@ -21,6 +22,8 @@ body {
     max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    min-height: 100vh;
 
     #nav-bar {
       counter-set: nav-counter;
@@ -141,6 +144,11 @@ body {
       }
     }
 
+    #social-media-icons,
+    #vertical-email {
+      display: none;
+    }
+
     #home {
       padding-left: 30px;
       padding-right: 30px;
@@ -170,7 +178,7 @@ body {
       }
     }
 
-    @media only screen and (min-width: 770px) {
+    @media only screen and (min-width: 900px) {
       #nav-bar {
         position: inline-felx;
         display: flex;
@@ -205,6 +213,65 @@ body {
             margin-right: 4px;
             color: $orange;
           }
+        }
+      }
+
+      #social-media-icons {
+        display: flex;
+        flex-direction: column;
+        color: $orange;
+        position: absolute;
+        bottom: 0;
+        width: 120px;
+        max-width: 120px;
+        height: 50vh;
+
+        #social-icons {
+          list-style: none;
+
+          .social-icon {
+            padding-top: 30px;
+            color: $dark-text;
+          }
+        }
+
+        .vertical-line-left-side {
+          border-left: 6px solid $dark-text;
+          height: 25vh;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          bottom: 0;
+        }
+      }
+
+      #vertical-email {
+        display: flex;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        bottom: 0;
+        width: 120px;
+        max-width: 120px;
+        height: 50vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 2em;
+
+        span {
+          width: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+          color: $dark-text;
+        }
+
+        .vertical-line-left-side {
+          border-left: 6px solid $dark-text;
+          height: 20%;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          bottom: 0;
         }
       }
 
