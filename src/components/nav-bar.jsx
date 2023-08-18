@@ -11,14 +11,10 @@ function Navbar() {
     }
 
     return (
-    <nav className='nav-bar'>
-        <div className='logo'>
-        <a href="#" id="icon" className="icon">
-              <UilApple />
-        </a>
-        </div>
-        <div className='bars'><UilBars onClick={() => toggleSideNav()}/></div>
-        <ul className="nav-items">
+    <nav id='nav-bar'>
+        <span id="logo"><a href="#"><UilApple /></a></span>
+        <div id='bars'><UilBars onClick={() => toggleSideNav()}/></div>
+        <ul id="nav-items">
             <li className="nav-item"><a href="#about-me" alt='about-me'>About Me</a></li>
             <li className="nav-item"><a href="#experience" alt="experience">Experience</a></li>
             <li className="nav-item"><a href="#portfolio" alt="portfolio">Portfolio</a></li>
