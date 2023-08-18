@@ -214,4 +214,85 @@ body {
       }
     }
   }
+
+  .intro-page {
+    height: 100vh;
+    width: 100vw;
+
+
+    .parent-container {
+        position: relative;
+        width: 70vw;
+        height: fit-content;
+        top: 20vh;
+        margin: auto;
+        display: block;
+        text-align: left;
+
+        .main-container {
+            position: relative;
+        }
+
+        .hello {
+            margin-left: 5px;
+            font-size: 1.5em;
+            color: $orange;
+            font-family: $tech-text;
+        }
+
+        .name {
+            font-size: 3.9em;
+            line-height: 60px;
+            margin: 10px 0 0 0;
+            white-space: nowrap;
+            color: rgb(243, 243, 243);
+            font-family: $bold-text;
+            font-weight: 900;
+        }
+
+        .job {
+            font-size: 4em;
+            margin: 10px 0;
+            // color: rgb(150, 150, 150);
+            color: $dark-text;
+            font-family: $bold-text;
+            font-weight: 900;
+        }
+
+        .biography {
+            width: 60%;
+            margin-left: 5px;
+            font-size: 1.2em;
+            color: $dark-text;
+            font-family: $bold-text;
+            font-weight: 400;
+
+            .orange {
+                color: $orange;
+            }
+        }
+
+    }
+
+    @media only screen and (min-width: 1380px) {
+        .parent-container {
+
+            .hello { 
+                font-size: 2em;
+            }
+
+            .name, .job {
+                font-size: 4.6em;
+            }
+
+            .biography {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+       
+    }
+}
 }
