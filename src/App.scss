@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background;
-  overflow-y: hidden;
+
 
   a {
     all: unset;
@@ -149,10 +149,16 @@ body {
       display: none;
     }
 
-    #home {
+    #landing {
       padding-left: 30px;
       padding-right: 30px;
       padding-top: 15vh;
+      height: 100vh;
+
+      p {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
 
       #hello {
         color: $orange;
@@ -162,20 +168,43 @@ body {
       #name {
         color: rgb(243, 243, 243);
         font-family: $bold-text;
-        font-size: 60px;
+        font-size: 35px;
+      }
+
+      #message {
+        font-size: 30px;
+        font-family: $bold-text;
+        font-weight: 2em;
+        color: $dark-text;
       }
 
       #bio {
         color: $dark-text;
         font-family: $bold-text;
         padding-top: 20px;
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 13px;
+        line-height: 20px;
         margin: 0;
         span {
           color: $orange;
         }
+
+        margin-bottom: 50px;
       }
+
+      #landing-button {
+        background: none;
+        font-size: 15px;
+        border:  solid 2px $orange;
+        border-radius: 5px;
+        color: $orange;
+        padding: 10px 50px;
+      }
+    }
+
+    #experience {
+      height: 100vh;
+      background-color: yellow;
     }
 
     @media only screen and (min-width: 900px) {
@@ -220,7 +249,7 @@ body {
         display: flex;
         flex-direction: column;
         color: $orange;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 120px;
         max-width: 120px;
@@ -253,7 +282,7 @@ body {
         width: 120px;
         max-width: 120px;
         height: 50vh;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 0;
         font-size: 2em;
@@ -275,7 +304,7 @@ body {
         }
       }
 
-      #home {
+      #landing {
         padding-left: 120px;
 
         #hello {

@@ -1,10 +1,11 @@
 import "./App.scss";
 import "./App.css";
 import Navbar from "./components/nav-bar";
-import HomePage from "./components/home-page";
+import Landing from "./components/landing";
 import Aside from "./components/aside";
 import SocialIcons from './components/left-social-media-icons';
 import RightEmail from './components/right-email';
+import Experience from './components/experience';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Navbar />
       <SocialIcons /> 
       <RightEmail />
-      <HomePage />
+      <Landing />
+      <Experience />
     </div>
   );
 }

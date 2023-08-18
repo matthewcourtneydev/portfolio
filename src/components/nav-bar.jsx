@@ -12,8 +12,8 @@ function Navbar() {
 
     return (
     <nav id='nav-bar'>
-        <span id="logo"><a href="#"><UilApple size={40}/></a></span>
-        <div id='bars'><UilBars onClick={() => toggleSideNav()}/></div>
+        <span id="logo"><a href="#"><UilApple size={35}/></a></span>
+        <div id='bars'><UilBars size={37} onClick={() => toggleSideNav()}/></div>
         <ul id="nav-items">
             <li className="nav-item"><a href="#about-me" alt='about-me'>About Me</a></li>
             <li className="nav-item"><a href="#experience" alt="experience">Experience</a></li>
