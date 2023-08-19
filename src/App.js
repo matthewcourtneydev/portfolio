@@ -8,6 +8,7 @@ import RightEmail from './components/right-email';
 import AboutMe from './components/about-me';
 import Experience from './components/experience';
 import Portfolio from './components/portofolio';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <AboutMe />
       <Experience />
       <Portfolio />
+      <Contact />
     </div>
   );
 }

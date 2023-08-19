@@ -415,6 +415,55 @@ body {
       }
     }
 
+    #contact {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 200px;
+
+      p {
+        margin: 0;
+      }
+
+      #whats-next {
+        margin: 0;
+        color: $orange;
+      }
+
+      #get-in-touch {
+        color: white;
+        font-size: 40px;
+      }
+
+      #message {
+        color: $dark-text;
+        font-size: 15px;
+        padding: 20px;
+      }
+
+      #contact-button {
+        margin-top: 40px;
+        font-size: 15px;
+        border: solid 2px $orange;
+        border-radius: 5px;
+        color: $orange;
+        padding: 10px 50px;
+        background: none;
+      }
+
+      #sm-icon-container-small {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        font-size: 20px;
+        color: $dark-text;
+        font-weight: bold;
+      }
+    }
+
     @media only screen and (min-width: 900px) {
       #nav-bar {
         position: inline-felx;
