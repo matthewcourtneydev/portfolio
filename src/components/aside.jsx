@@ -3,7 +3,8 @@ import React from 'react';
 function Aside() {
 
     const closeSideNav = () => {
-        document.querySelector('.nav-side-bar').classList.add('hide')
+        document.querySelector('.nav-side-bar').classList.add('hide');
+        document.querySelector('#nav-bar').classList.remove('hide')
     }
 
     return (

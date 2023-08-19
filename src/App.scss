@@ -4,15 +4,10 @@ $tech-text: "Share Tech", sans-serif;
 $bold-text: "Roboto", sans-serif;
 $background: #3c475c;
 
-.hide {
-  display: none;
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: $background;
-
 
   a {
     all: unset;
@@ -25,18 +20,40 @@ body {
     position: relative;
     min-height: 100vh;
 
-    #nav-bar {
-      counter-set: nav-counter;
-      padding-top: 16px;
+    counter-set: content-counter;
+    .content-header::before {
+      content: counter(content-counter, decimal-leading-zero) "." "\A";
+      counter-increment: content-counter;
+      color: $orange;
+      font-size: 15px;
+    }
+
+    .content-header {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .page {
       padding-left: 30px;
       padding-right: 30px;
+    }
 
-      position: inline-felx;
+    #nav-bar {
+      counter-set: nav-counter;
       display: flex;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding-left: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
 
       #bars {
-        margin-left: auto;
         color: $orange;
+        position: fixed;
+        right: 30px;
       }
 
       #logo {
@@ -82,8 +99,8 @@ body {
 
         .exit {
           position: fixed;
-          top: 8px;
-          right: 25px;
+          top: 25px;
+          right: 30px;
           padding: 10px;
           color: $orange;
           font-weight: bolder;
@@ -97,7 +114,6 @@ body {
           font-size: 20px;
           padding-left: 0;
           padding-top: 70px;
-
         }
 
         li {
@@ -162,10 +178,8 @@ body {
     }
 
     #landing {
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 15vh;
-      height: 100vh;
+      padding-top: 25vh;
+      padding-bottom: 25vh;
 
       p {
         margin-top: 5px;
@@ -207,16 +221,59 @@ body {
       #landing-button {
         background: none;
         font-size: 15px;
-        border:  solid 2px $orange;
+        border: solid 2px $orange;
         border-radius: 5px;
         color: $orange;
         padding: 10px 50px;
       }
     }
 
-    #experience {
-      height: 100vh;
-      background-color: yellow;
+    #about-me {
+      padding-top: 30px;
+      height: fit-content;
+      padding-bottom: 55px;
+
+      p {
+        color: $dark-text;
+        font-family: $bold-text;
+        font-size: 13px;
+        line-height: 20px;
+
+        span {
+          color: $orange;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        border: solid 2px $orange;
+      }
+      #technologies-about-me {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        height: 70px;
+
+
+        .technology {
+          width: 40%;
+          margin-top: 7px;
+          font-size: 12px;
+          font-family: $tech-text;
+          color: $dark-text;
+        }
+        
+        .technology::before {
+          content: '\25B2';
+          color: $orange;
+          margin-right: 10px;
+          font-size: 10px
+        }
+      }
     }
 
     @media only screen and (min-width: 900px) {
@@ -226,6 +283,8 @@ body {
         font-size: 1.5em;
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 10px;
+        background: none;
 
         #logo {
           padding-left: 120px;
@@ -247,12 +306,28 @@ body {
           font-weight: bold;
           color: $dark-text;
           padding-right: 120px;
+          padding-top: 15px;
 
           .nav-item:before {
             content: counter(nav-counter, decimal-leading-zero) ".";
             counter-increment: nav-counter;
             margin-right: 4px;
             color: $orange;
+          }
+
+          #resume {
+            font-weight: normal;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 2px;
+            padding: 7px 35px;
+            color: $orange;
+            border: solid 2px $orange;
+            margin-top: -9px;
+
+            li {
+              margin: 0;
+            }
           }
         }
       }
@@ -334,6 +409,10 @@ body {
           line-height: 45px;
         }
       }
+    }
+
+    .hide {
+      display: none !important;
     }
   }
 }

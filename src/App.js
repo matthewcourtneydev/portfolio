@@ -5,7 +5,7 @@ import Landing from "./components/landing";
 import Aside from "./components/aside";
 import SocialIcons from './components/left-social-media-icons';
 import RightEmail from './components/right-email';
-import Experience from './components/experience';
+import AboutMe from './components/about-me';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <SocialIcons /> 
       <RightEmail />
       <Landing />
-      <Experience />
+      <AboutMe />
     </div>
   );
 }
