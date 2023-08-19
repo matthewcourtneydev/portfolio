@@ -1,4 +1,5 @@
 import React from 'react';
+import { UilExternalLinkAlt, UilGithubAlt } from '@iconscout/react-unicons'
 
 const ProjectOne = () => {
     return (
@@ -12,8 +13,8 @@ const ProjectOne = () => {
                 <li className="tech">Scss</li>
             </ul>
             <div className="project-links-container">
-                <span className="btn">X</span>
-                <span className="btn">X</span>
+                <span className="btn"><UilExternalLinkAlt /></span>
+                <span className="btn"><UilGithubAlt /></span>
             </div>
         </div>
     );
