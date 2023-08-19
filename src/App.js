@@ -11,6 +11,7 @@ import Portfolio from './components/portofolio';
 import Contact from './components/contact';
 
 function App() {
+  
   return (
     <div className="App">
       <Aside />

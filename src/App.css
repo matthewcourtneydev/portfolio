@@ -1,8 +1,22 @@
 @media only screen and (max-width: 600px) {
 
   }
-
   .nav-hidden {
     transform: translateY(-100px);
     transition: transform .5s;
+  }
+
+  .content-container, .page {
+    animation: slideUpFromBottom .5s ease-in;
+  }
+
+  @keyframes slideUpFromBottom {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }

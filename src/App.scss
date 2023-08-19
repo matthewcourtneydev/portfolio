@@ -4,7 +4,7 @@ $tech-text: "Share Tech", sans-serif;
 $bold-text: "Roboto", sans-serif;
 $background: #3c475c;
 $blur: #29303f;
-$transparentOrange: #f7a05940;
+$transparentOrange: #f7a05926;
 
 body {
   margin: 0;
@@ -50,7 +50,7 @@ body {
       padding-left: 25px;
       padding-top: 25px;
       padding-bottom: 30px;
-      background-image: linear-gradient(#3c475cec, #3c475c14);
+      background-image: linear-gradient(#3c475c, #3c475c14);
 
       #bars {
         color: $orange;
@@ -183,7 +183,7 @@ body {
       padding-top: 25vh;
       padding-bottom: 25vh;
 
-      p {
+      h4 {
         margin-top: 5px;
         margin-bottom: 0;
       }
@@ -191,6 +191,7 @@ body {
       #hello {
         color: $orange;
         font-family: $tech-text;
+        font-size: 30px;
       }
 
       #name {
@@ -235,14 +236,19 @@ body {
       height: fit-content;
       padding-bottom: 55px;
 
-      p {
-        color: $dark-text;
-        font-family: $bold-text;
-        font-size: 13px;
-        line-height: 20px;
+      .text-container {
+        width: 100%;
+        display: inline-block;
 
-        span {
-          color: $orange;
+        p {
+          color: $dark-text;
+          font-family: $bold-text;
+          font-size: 13px;
+          line-height: 20px;
+
+          span {
+            color: $orange;
+          }
         }
       }
 
@@ -250,8 +256,14 @@ body {
         width: 100%;
         height: auto;
         border-radius: 5px;
+        margin-top: 40px;
         border: solid 2px $orange;
       }
+
+      #accent-square {
+        display: none;
+      }
+
       #technologies-about-me {
         display: flex;
         flex-direction: column;
@@ -305,8 +317,9 @@ body {
           background: inherit;
         }
 
-        li:hover {
-          background: inherit;
+        .tab:hover {
+          background-image: linear-gradient(#3c475c00, #2b334375);
+          cursor: pointer;
         }
       }
 
@@ -358,9 +371,9 @@ body {
         min-height: auto;
         padding: 20px;
         border-radius: 5px;
-        -webkit-box-shadow: 0px 10px 37px 1px rgba(41,48,63,1);
-        -moz-box-shadow: 0px 10px 37px 1px rgba(41,48,63,1);
-        box-shadow: 0px 10px 37px 1px rgba(41,48,63,1);
+        -webkit-box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
+        -moz-box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
+        box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
         background: $transparentOrange;
         margin-bottom: 35px;
 
@@ -461,22 +474,44 @@ body {
         font-size: 20px;
         color: $dark-text;
         font-weight: bold;
+
+        li:hover {
+          font-size: 24px;
+          color: $orange;
+        }
       }
     }
 
     @media only screen and (min-width: 900px) {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .content-header::before {
+        font-size: 25px;
+      }
+
+      .page {
+        max-width: 1000px;
+        width: 60vw;
+      }
+
+      .content-header {
+        font-size: 30px;
+      }
+
       #nav-bar {
-        position: inline-felx;
-        display: flex;
-        font-size: 1.5em;
+        font-size: 20px;
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 10px;
-        background: none;
+        padding-top: 0;
+        left: 0;
 
         #logo {
-          padding-left: 120px;
-          padding-top: 16px;
+          padding-left: 50px;
+          padding-top: 20px;
           color: $orange;
         }
 
@@ -487,19 +522,20 @@ body {
         #nav-items {
           list-style: none;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
           width: 60%;
           max-width: 800px;
           margin-left: auto;
           font-weight: bold;
           color: $dark-text;
-          padding-right: 120px;
+          padding-right: 50px;
           padding-top: 15px;
 
           .nav-item:before {
             content: counter(nav-counter, decimal-leading-zero) ".";
             counter-increment: nav-counter;
             margin-right: 4px;
+            font-size: 15px;
             color: $orange;
           }
 
@@ -523,82 +559,256 @@ body {
       #social-media-icons {
         display: flex;
         flex-direction: column;
-        color: $orange;
         position: fixed;
         bottom: 0;
+        left: 0;
         width: 120px;
         max-width: 120px;
-        height: 50vh;
 
         #social-icons {
           list-style: none;
+          justify-content: center;
+          padding-left: 40px;
+          margin-bottom: 120px;
 
           .social-icon {
-            padding-top: 30px;
+            padding-top: 20px;
             color: $dark-text;
+          }
+
+          .social-icon:hover {
+            color: $orange;
+            cursor: pointer;
           }
         }
 
         .vertical-line-left-side {
-          border-left: 6px solid $dark-text;
-          height: 25vh;
-          position: absolute;
-          left: 50%;
-          margin-left: -3px;
+          position: fixed;
           bottom: 0;
+          left: 0;
+          border-right: solid 2px $dark-text;
+          height: 100px;
+          width: 50px;
         }
       }
 
       #vertical-email {
-        display: flex;
         writing-mode: vertical-rl;
         text-orientation: mixed;
-        bottom: 0;
-        width: 120px;
-        max-width: 120px;
-        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        color: $orange;
         position: fixed;
         bottom: 0;
         right: 0;
-        font-size: 2em;
+        width: 120px;
+        max-width: 120px;
+
+        span:hover {
+          color: $orange;
+          cursor: pointer;
+        }
 
         span {
           width: fit-content;
-          margin-left: auto;
-          margin-right: auto;
+          margin-right: 40px;
+          margin-bottom: 120px;
           color: $dark-text;
         }
 
         .vertical-line-left-side {
-          border-left: 6px solid $dark-text;
-          height: 20%;
-          position: absolute;
-          left: 50%;
-          margin-left: -3px;
+          position: fixed;
           bottom: 0;
+          right: 0;
+          border-left: solid 2px $dark-text;
+          height: 100px;
+          width: 50px;
         }
       }
 
       #landing {
-        padding-left: 120px;
+        max-width: 1000px;
+        margin: auto;
+        justify-content: center;
+        padding-top: 30vh;
+
+        p {
+          margin-top: 0;
+        }
 
         #hello {
-          font-size: 4em;
+          font-size: 20px;
         }
 
         #name {
-          font-size: 9em;
+          font-size: 85px;
         }
 
+        #message {
+          font-size: 75px;
+        }
         #bio {
-          max-width: 900px;
-          padding-top: 20px;
-          font-size: 30px;
-          line-height: 45px;
+          max-width: 700px;
+          padding-top: 30px;
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+
+      #about-me {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 40vh;
+
+        .content-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+
+          .text-container {
+            width: 50%;
+
+            p {
+              font-size: 20px;
+              line-height: 30px;
+            }
+
+            #technologies-about-me {
+              .technology {
+                font-size: 18px;
+              }
+
+              .technology::before {
+                font-size: 15px;
+              }
+            }
+          }
+
+          img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 20px;
+            z-index: 2;
+          }
+
+          #accent-square {
+            display: inline-flex;
+            height: 400px;
+            width: 400px;
+            border: solid 2px $orange;
+            border-radius: 5px;
+            position: absolute;
+            right: 1%;
+            bottom: 23%;
+            z-index: 1;
+
+          }
+        }
+      }
+
+      #experience {
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 40vh;
+
+        p {
+          font-size: 20px;
+        }
+
+        #display-container {
+          .display {
+            .job-title {
+              font-size: 23px;
+            }
+
+            li {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      #portfolio {
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 20vh;
+        padding-bottom: 20px;
+
+        .card-container {
+          display: flex;
+          margin-bottom: 30px;
+
+          .new-background {
+            background-color: $transparentOrange;
+            margin-top: auto;
+            margin-bottom: auto;
+            min-width: 600px;
+            height: 350px;
+          }
+
+          .project-card {
+            background: none;
+            box-shadow: none;
+            text-align: right;
+            height: fit-content;
+            position: relative;
+            bottom: -10px;
+            right: 260px;
+            min-width: 600px;
+
+            .project-label {
+              padding-bottom: 10px;
+              font-size: 18px;
+            }
+            .project-title {
+              padding-bottom: 20px;
+              font-size: 28px;
+            }
+
+            .project-desc {
+              background-color: $background;
+              padding: 20px;
+              font-size: 20px;
+              border-radius: 5px;
+              -webkit-box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
+              -moz-box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
+              box-shadow: 0px 10px 37px 1px rgba(41, 48, 63, 1);
+            }
+
+            .project-tech {
+              justify-content: right;
+
+              .tech {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      #contact {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+        #message {
+          font-size: 20px;
+          line-height: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 500px;
+        }
+
+        #sm-icon-container-small {
+          display: none;
         }
       }
     }
-
+    // end of media query
     .hide {
       display: none !important;
     }

@@ -3,6 +3,7 @@ import { UilApple, UilBars } from "@iconscout/react-unicons";
 
 function Navbar() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [screenSize, setScreenSize] = useState();
 
   let navbar = document.querySelector("#nav-bar");
   let lastScrollY = window.scrollY;
