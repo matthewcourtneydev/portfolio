@@ -6,6 +6,7 @@ import Aside from "./components/aside";
 import SocialIcons from './components/left-social-media-icons';
 import RightEmail from './components/right-email';
 import AboutMe from './components/about-me';
+import Experience from './components/experience';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <RightEmail />
       <Landing />
       <AboutMe />
+      <Experience />
     </div>
   );
 }
