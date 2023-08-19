@@ -7,17 +7,17 @@ function Navbar() {
   let navbar = document.querySelector("#nav-bar");
   let lastScrollY = window.scrollY;
 
-//   window.addEventListener("scroll", () => {
-//     if (lastScrollY < window.scrollY) {
-//       console.log("down");
-//       setIsScrollingDown(true);
-//     } else {
-//       console.log("up");
-//       setIsScrollingDown(false);
-//     }
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      console.log("down");
+      setIsScrollingDown(true);
+    } else {
+      console.log("up");
+      setIsScrollingDown(false);
+    }
 
-//     lastScrollY = window.scrollY;
-//   });
+    lastScrollY = window.scrollY;
+  });
 
   const toggleSideNav = () => {
     console.log("Hamburger Clicked");

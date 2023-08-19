@@ -1,4 +1,5 @@
 import React from 'react';
+import { UilLinkedin, UilFacebook,  UilInstagram, UilGithub, UilDropbox } from '@iconscout/react-unicons'
 
 const Contact = () => {
     return (
@@ -10,11 +11,11 @@ const Contact = () => {
             <button id="contact-button">Reach Out</button>
 
             <ul id="sm-icon-container-small">
-                <li className="sm-icon">X</li>
-                <li className="sm-icon">X</li>
-                <li className="sm-icon">X</li>
-                <li className="sm-icon">X</li>
-                <li className="sm-icon">X</li>
+                <li className="sm-icon"><UilLinkedin /></li>
+                <li className="sm-icon"><UilFacebook /></li>
+                <li className="sm-icon"><UilGithub /></li>
+                <li className="sm-icon"><UilInstagram /></li>
+                <li className="sm-icon"><UilDropbox /></li>
             </ul>
         </div>
     );
