@@ -426,6 +426,80 @@ body {
           }
         }
       }
+
+      .noteworthy {
+        padding-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        width: fit-content;
+        color: white;
+        font-size: 20px;
+      }
+      .view {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        color: $orange;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      #other-container {
+        display: flex;
+        flex-direction: column;
+
+        .other-card {
+          padding: 20px;
+          font-size: 30px;
+          background-color: $transparentOrange;
+          text-align: left;
+          margin-bottom: 10px;
+
+          .button-container {
+            width: 100%;
+            margin-bottom: 50px;
+            
+            .folder {
+              float: left;
+              color: $orange;
+            }
+
+            .deployed-link {
+              float: right;
+              color: $orange;
+            }
+          }
+
+
+          .title {
+            font-size: 25px;
+            color: white;
+          }
+
+          .description {
+            padding-top: 15px;
+            font-size: 15px;
+            color: $dark-text;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 15px;
+  
+            .tech {
+              margin-right: 10px;
+              font-size: 13px;
+              color: $dark-text;
+            }
+          }
+        }
+      }
     }
 
     #contact {
@@ -508,6 +582,7 @@ body {
         padding-bottom: 10px;
         padding-top: 0;
         left: 0;
+        z-index: 1000;
 
         #logo {
           padding-left: 50px;
@@ -668,7 +743,7 @@ body {
           position: relative;
 
           .text-container {
-            width: 50%;
+            width: 45%;
 
             p {
               font-size: 20px;
@@ -687,25 +762,29 @@ body {
           }
 
           img {
-            width: 40%;
-            height: auto;
+            height: 350px;
+            width: 350px;
             max-width: 500px;
             margin: auto;
             margin-top: 20px;
             z-index: 2;
+            position: absolute;
+            right: 40px;
           }
 
           #accent-square {
             display: inline-flex;
-            height: 400px;
-            width: 400px;
+            height: 350px;
+            width: 350px;
+            margin-top: 20px;
             border: solid 2px $orange;
             border-radius: 5px;
             position: absolute;
-            right: 1%;
-            bottom: 23%;
-            z-index: 1;
-
+            right: 20px;
+            top: 20px;
+            // right: 1%;
+            // bottom: 20%;
+            // z-index: 1;
           }
         }
       }
@@ -741,12 +820,15 @@ body {
         .card-container {
           display: flex;
           margin-bottom: 30px;
+          padding-left: 5%;
 
           .new-background {
             background-color: $transparentOrange;
             margin-top: auto;
             margin-bottom: auto;
-            min-width: 600px;
+            width: 50%;
+            min-width: 500px;
+            max-width: 500px;
             height: 350px;
           }
 
@@ -759,6 +841,7 @@ body {
             bottom: -10px;
             right: 260px;
             min-width: 600px;
+            max-width: 500px;
 
             .project-label {
               padding-bottom: 10px;
@@ -788,7 +871,20 @@ body {
             }
           }
         }
+
+        #other-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+  
+          .other-card {
+            padding: 20px;
+            font-size: 30px;
+            margin: 5px;
+          }
+        }
+        
       }
+      // 
 
       #contact {
         max-width: 1000px;

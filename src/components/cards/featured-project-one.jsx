@@ -14,6 +14,7 @@ const ProjectOne = () => {
           projects in the works including a <span>Harry Potter Quiz</span> and{" "}
           <span>Pokedex</span>. Stay tuned to see more.
         </p>
+        
         <ul className="project-tech">
           <li className="tech">React</li>
           <li className="tech">JSX</li>
