@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from 'react-intersection-observer';
 import Bank from "./experience_tabs/bank";
 import Tek from "./experience_tabs/tek";
 import Psp from "./experience_tabs/psp";
@@ -7,10 +8,13 @@ const Experience = () => {
   const [displayIndex, setDisplayIndex] = useState("bank");
   const [isActive, setIsActive] = useState("bank");
 
+  const {ref: header, inView: headerVisable } = useInView();
+  const {ref: container, inView: containerVisable } = useInView();
+
   return (
     <div id="experience" className="page">
-      <h3 className="content-header">Experience</h3>
-      <div id="tab-container">
+      <h3 ref={header} className={`content-header ${headerVisable ? "fade-in" : ""}`}>Experience</h3>
+      <div ref={container} className={containerVisable ? "fade-in" : ""} id="tab-container">
         <ul id="tabs">
           <li
             id="company-tab1"

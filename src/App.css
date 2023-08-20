@@ -1,13 +1,19 @@
 @media only screen and (max-width: 600px) {
 
   }
+
   .nav-hidden {
     transform: translateY(-100px);
     transition: transform .5s;
   }
 
-  .content-container, .page {
+  .slide-up {
     animation: slideUpFromBottom .5s ease-in;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s;
+
   }
 
   @keyframes slideUpFromBottom {
@@ -17,6 +23,15 @@
     }
     100% {
       transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
       opacity: 1;
     }
   }

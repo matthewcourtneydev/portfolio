@@ -1,9 +1,12 @@
 import React from 'react';
 import { UilExternalLinkAlt, UilGithubAlt } from '@iconscout/react-unicons'
+import { useInView } from "react-intersection-observer";
 
 const ProjectTwo = () => {
-    return (
-        <div className="card-container">
+  const {ref: card, inView: cardVisable } = useInView();
+
+  return (
+    <div ref={card} className={`card-container ${cardVisable ? "fade-in" : ""}`}>
         <div className="new-background"></div>
         <div className="project-card" id="project-two">
           <p className="project-label">featured project</p>
