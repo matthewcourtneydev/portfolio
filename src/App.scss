@@ -229,6 +229,12 @@ body {
         color: $orange;
         padding: 10px 50px;
       }
+
+
+      #landing-button:hover {
+        background-color: $orange;
+        color: $background;
+      }
     }
 
     #about-me {
@@ -455,6 +461,7 @@ body {
           background-color: $transparentOrange;
           text-align: left;
           margin-bottom: 10px;
+          border-radius: 5px;
 
           .button-container {
             width: 100%;
@@ -598,6 +605,7 @@ body {
           list-style: none;
           display: flex;
           justify-content: space-between;
+          cursor: pointer;
           width: 60%;
           max-width: 800px;
           margin-left: auto;
@@ -614,6 +622,10 @@ body {
             color: $orange;
           }
 
+          .nav-item:hover {
+            color: $orange;
+          } 
+
           #resume {
             font-weight: normal;
             width: fit-content;
@@ -627,6 +639,11 @@ body {
             li {
               margin: 0;
             }
+          }
+
+          #resume:hover {
+            background-color: $orange;
+            color: $background;
           }
         }
       }
