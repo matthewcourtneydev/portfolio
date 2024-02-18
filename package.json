@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://matthewcourtneydev.github.io/portfolio/public/",
+  "homepage": "https://matthewcourtneydev.github.io/portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
