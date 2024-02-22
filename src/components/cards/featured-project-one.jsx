@@ -7,12 +7,14 @@ const ProjectOne = () => {
 
   return (
     <div ref={card} className={`card-container ${cardVisable ? "fade-in" : ""}`}>
-      <div className="new-background"></div>
+      <div className="new-background">
+        <div className="project-img"></div>
+      </div>
       <div className="project-card" id="project-one">
         <p className="project-label">featured project</p>
-        <p className="project-title">Project One Title</p>
+        <p className="project-title">Wordle</p>
         <p className="project-desc">
-        Exciting projects are on the horizon! Thank you for your patience as I diligently work on crafting high-quality additions to my portfolio. Stay tuned for updates and showcases of my latest work.
+I created a Wordle application from scratch using React.js, HTML, and SCSS, driven by the goal of showcasing my coding proficiency and problem-solving abilities. This project stands as a testament to my independent approach, deviating from tutorial-based learning to produce a unique and original application.
         </p>
         
         <ul className="project-tech">
@@ -22,10 +24,14 @@ const ProjectOne = () => {
         </ul>
         <div className="project-links-container">
           <span className="btn">
+            <a href="https://matthewcourtneydev.github.io/wordle-ui/" target="_blank">
             <UilExternalLinkAlt />
+            </a>
           </span>
           <span className="btn">
+            <a href="https://github.com/matthewcourtneydev/wordle-ui" target="_blank">
             <UilGithubAlt />
+            </a>
           </span>
         </div>
       </div>
