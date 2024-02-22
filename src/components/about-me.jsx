@@ -13,16 +13,19 @@ const AboutMe = () => {
                 <h3 ref={header} className={`content-header ${headerVisable ? "fade-in" : ""}`}>About Me</h3>
                 <div className="content-container">
                 <div ref={text} className={`text-container ${textVisable ? "fade-in" : ""}`}>
-                <p>Hello! My name is Matt and I enjoy creating beautiful web pages. Since I was a child I have had a passion for art and graphic design. When the pandemic struck in 2020 I decided to take the oppertunity to explore a new career path. </p>
-                <p>I started my software engineering journey through a bootcamp and quickly fell in love with the process of imagining and building web pages. My interest in art carried over into learning to design clean, responsive and beautiful web pages. Ive been obsessed ever since.</p>
-                <p>While I continue to learn everyday here are a handful of languages that I use on a daily basis as an <span>Assistant Vice President</span> at <span>Bank of America</span>.</p>
+                    <p>Greetings! I'm Matt, a dedicated creator of visually stunning web pages with a lifelong passion for art and graphic design. In response to the challenges posed by the pandemic in 2020, I seized the opportunity to embark on a new journey.</p>
+                    <p>My journey into software engineering began with a transformative bootcamp experience, where I quickly became enamored with the process of conceptualizing and constructing web pages. Drawing from my background in art, I've cultivated a keen eye for design, emphasizing cleanliness, responsiveness, and aesthetic appeal in my work. Since then, my dedication to this craft has only deepened.</p>
+                    <p>Currently serving as an <span>Assistant Vice President</span> at <span>Bank of America</span>, I leverage my evolving expertise in software engineering daily. Here are a few of the languages I proficiently utilize in my role:</p>
                 <ul id="technologies-about-me">
                     <li className="technology">JavaScript</li>
                     <li className="technology">React.js</li>
                     <li className="technology">Vue.js</li>
-                    <li className="technology">Handlesbars</li>
-                    <li className="technology">Scss</li>
+                    <li className="technology">HTML/HBS</li>
+                    <li className="technology">CSS/SCSS</li>
                     <li className="technology">Node.js</li>
+                    <li className="technology">MongoDB</li>
+                    <li className="technology">SQL</li>
+                    <li className="technology">SAFe/Agile</li>
                 </ul>
                 </div>
                 <div id="accent-square"></div>

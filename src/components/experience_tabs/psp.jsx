@@ -9,11 +9,13 @@ const Psp = () => {
       <p className="time-at-role">January 2017 - March 2020</p>
       <ul className="work-desc">
         <li className="work-bullet">
-          I work closely with a small team of develpers to create and maintain
-          several web-pages and applications within the banks in-house network
+        Spearheaded new business sales initiatives, securing contracts totaling over $200,000, while adeptly maintaining existing client relationships, contributing an additional $200,000+ in repeat customer sales revenue.
         </li>
         <li className="work-bullet">
-          I help run daily stand ups as well as PI planning.
+        Led and managed a dynamic sales team of 4-8 individuals, providing comprehensive training and ongoing support during sales calls to ensure team cohesion and effectiveness.
+        </li>
+        <li className="work-bullet">
+        Achieved consistent top-tier performance, ranking within the top 10% nationwide for production, showcasing a strong track record of delivering exceptional results.
         </li>
       </ul>
     </div>

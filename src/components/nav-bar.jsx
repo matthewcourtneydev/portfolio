@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { UilApple, UilBars } from "@iconscout/react-unicons";
+import DevLogo from '../assets/mdc-dev.png';
+import Resume from '../assets/mdc_resume.pdf';
 
 function Navbar() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -27,11 +29,16 @@ function Navbar() {
     document.querySelector("#nav-bar").classList.add('hide')
   };
 
+  function openPdf() {
+    console.log('resume')
+    window.open("'../assets/mdc_resume.pdf'","_blank");
+  }
+
   return (
     <nav id="nav-bar" className={isScrollingDown ? "nav-hidden" : ""}>
       <span id="logo">
         <a href="#">
-          <UilApple size={35} />
+        <img src={DevLogo} alt="logo" />
         </a>
       </span>
       <div id="bars">
@@ -60,9 +67,8 @@ function Navbar() {
         </li>
         <a
           id="resume"
-          href="https://docs.google.com/document/d/17opt3I8CcLb9RlvjImX0rZh_OCu8VfmVmiucvmh_AFQ/edit?usp=sharinghttps://docs.google.com/document/d/17opt3I8CcLb9RlvjImX0rZh_OCu8VfmVmiucvmh_AFQ/edit?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
+          href={Resume}
+          target='_blank'
         >
           <li className="resume-button">Resume</li>
         </a>

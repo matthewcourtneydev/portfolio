@@ -17,10 +17,7 @@ const OtherCard = () => {
       </div>
       <other className="title">Project Title</other>
       <div className="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-        deleniti porro, voluptatem illo quod amet laudantium animi nobis totam
-        repudiandae eum optio. Libero quis sunt, obcaecati inventore aliquam non
-        at?
+      Exciting projects are on the horizon! Thank you for your patience as I diligently work on crafting high-quality additions to my portfolio. Stay tuned for updates and showcases of my latest work.
       </div>
       <ul className="tech-stack">
         <li className="tech">React</li>

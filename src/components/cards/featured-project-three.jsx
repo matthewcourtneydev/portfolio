@@ -12,10 +12,7 @@ const ProjectThree = () => {
         <p className="project-label">featured project</p>
         <p className="project-title">Project One Title</p>
         <p className="project-desc">
-          A really cool project. I promise once I get back in my groove with
-          this portfolio warm up the projects will come. I have a ton of
-          projects in the works including a <span>Harry Potter Quiz</span> and{" "}
-          <span>Pokedex</span>. Stay tuned to see more.
+        Exciting projects are on the horizon! Thank you for your patience as I diligently work on crafting high-quality additions to my portfolio. Stay tuned for updates and showcases of my latest work.
         </p>
         <ul className="project-tech">
           <li className="tech">React</li>
