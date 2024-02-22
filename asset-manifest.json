@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/mdc-web-dev.com/static/css/main.61356f25.css",
-    "main.js": "/mdc-web-dev.com/static/js/main.48bd1b12.js",
-    "static/media/IMG_7307.jpg": "/mdc-web-dev.com/static/media/IMG_7307.b6186b64ea0c509c9838.jpg",
-    "static/media/wordle.png": "/mdc-web-dev.com/static/media/wordle.8de9ef534f330da428b3.png",
-    "static/media/mdc_resume.pdf": "/mdc-web-dev.com/static/media/mdc_resume.65cbafd4cb334380bded.pdf",
-    "static/media/mdc-dev.png": "/mdc-web-dev.com/static/media/mdc-dev.bd6b6d977b8e1056c4ed.png",
-    "index.html": "/mdc-web-dev.com/index.html",
-    "main.61356f25.css.map": "/mdc-web-dev.com/static/css/main.61356f25.css.map",
-    "main.48bd1b12.js.map": "/mdc-web-dev.com/static/js/main.48bd1b12.js.map"
+    "main.css": "/static/css/main.09ea764a.css",
+    "main.js": "/static/js/main.2ee7c96e.js",
+    "static/media/IMG_7307.jpg": "/static/media/IMG_7307.b6186b64ea0c509c9838.jpg",
+    "static/media/wordle.png": "/static/media/wordle.8de9ef534f330da428b3.png",
+    "static/media/mdc_resume.pdf": "/static/media/mdc_resume.65cbafd4cb334380bded.pdf",
+    "static/media/mdc-dev.png": "/static/media/mdc-dev.bd6b6d977b8e1056c4ed.png",
+    "index.html": "/index.html",
+    "main.09ea764a.css.map": "/static/css/main.09ea764a.css.map",
+    "main.2ee7c96e.js.map": "/static/js/main.2ee7c96e.js.map"
   },
   "entrypoints": [
-    "static/css/main.61356f25.css",
-    "static/js/main.48bd1b12.js"
+    "static/css/main.09ea764a.css",
+    "static/js/main.2ee7c96e.js"
   ]
 }
