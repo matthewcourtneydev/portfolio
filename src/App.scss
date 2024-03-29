@@ -5,11 +5,12 @@ $bold-text: "Roboto", sans-serif;
 $background: #3c475c;
 $blur: #29303f;
 $transparentOrange: #f7a05997;
+$darker-bg: #323c4d;
 
 body {
   margin: 0;
   padding: 0;
-  background-color: $background;
+  background-color: $darker-bg;
 
   a {
     all: unset;
@@ -50,7 +51,7 @@ body {
       padding-left: 25px;
       padding-top: 25px;
       padding-bottom: 30px;
-      background-image: linear-gradient(#3c475c, #3c475c14);
+      background-image: linear-gradient(#323c4d, #323c4d00);
 
       #bars {
         color: $orange;
@@ -95,8 +96,8 @@ body {
       backdrop-filter: blur(5px);
 
       .nav-content {
-        background-color: #3c475c;
-        width: 70vw;
+        background-color: $darker-bg;
+        width: 70vw;  
         height: 100vh;
         display: flex;
         position: fixed;
@@ -168,7 +169,7 @@ body {
           }
 
           .resume-button:hover {
-            color: $background;
+            color: $darker-bg;
             background-color: #f7a059;
           }
 
@@ -241,7 +242,7 @@ body {
   
         #landing-button:hover {
           background-color: $orange;
-          color: $background;
+          color: $darker-bg;
         }
       }
 
@@ -468,7 +469,7 @@ body {
         .other-card {
           padding: 20px;
           font-size: 30px;
-          background-color: $transparentOrange;
+          background-color: $background;
           text-align: left;
           margin-bottom: 10px;
           border-radius: 5px;
@@ -662,7 +663,7 @@ body {
 
           #resume:hover {
             background-color: $orange;
-            color: $background;
+            color: $darker-bg;
           }
         }
       }
@@ -895,7 +896,19 @@ body {
               background-repeat: no-repeat;
             }
 
-            .project-img2:hover, .project-img:hover {
+            .project-img3 {
+              background-image: url(./img/weather-app.png);
+              background-size: cover;
+              background-repeat: none;
+              z-index: -2;
+              height: 100%;
+              min-height: 100%;
+              width: 100%;
+              box-shadow: inset 0 0 0 1000px $transparentOrange;
+              background-repeat: no-repeat;
+            }
+
+            .project-img3:hover, .project-img2:hover, .project-img:hover {
               box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
             }
           }
@@ -921,7 +934,7 @@ body {
             }
 
             .project-desc {
-              background-color: $background;
+              background-color: $darker-bg;
               padding: 20px;
               font-size: 20px;
               border-radius: 5px;
@@ -948,6 +961,7 @@ body {
             padding: 20px;
             font-size: 30px;
             margin: 5px;
+            background-color: $background;
           }
         }
         
